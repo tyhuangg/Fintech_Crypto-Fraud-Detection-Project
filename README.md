@@ -77,11 +77,13 @@ finalProj/
 ### 🔹 1. 資料清理合併
 ```bash
 python3 dataMerge.py
+```
 
 🔹 2. 監督式模型 — Logistic Regression（Supervised Model）
 使用標記過的 illicit / licit 交易訓練模型，產出 fraud_score：
-
+```bash
 python3 supervised.py
+```
 
 🔹 3. 非監督式模型 — Isolation Forest（Unsupervised Model）
 
