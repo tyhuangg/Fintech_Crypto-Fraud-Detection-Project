@@ -78,29 +78,32 @@ finalProj/
 ```bash
 python3 dataMerge.py
 
-**### 🔹 2. 監督式模型（Logistic Regression）**
-```bash
+🔹 2. 監督式模型 — Logistic Regression（Supervised Model）
+使用標記過的 illicit / licit 交易訓練模型，產出 fraud_score：
+
 python3 supervised.py
 
-**### 🔹 3. 非監督式模型（Isolation Forest）**
-```bash
+🔹 3. 非監督式模型 — Isolation Forest（Unsupervised Model）
+
+偵測沒有標記但異常的交易，產生 anomaly_score：
+
 python3 unsupervised.py
 
-**### 🔹 4. 風險融合模型（最終分數）**
-```bash
+🔹 4. 風險融合模型（Final Risk Fusion Model）
+
+將 LR + IF 分數融合，得到最終 fraud_risk_score + ranking：
+
 python3 finalRiskScore.py
 
-**## 最終產出（Final Outputs）**
-| 檔案                         | 內容                               |
-| -------------------------- | -------------------------------- |
-| **lr_predictions.csv**     | Logistic Regression fraud scores |
-| **if_anomaly_scores.csv**  | Isolation Forest anomaly scores  |
-| **risk_fusion_scores.csv** | Final risk score + ranking       |
+🏁 最終產出（Final Outputs）
+檔案	內容
+lr_predictions.csv	Logistic Regression fraud scores
+if_anomaly_scores.csv	Isolation Forest anomaly scores
+risk_fusion_scores.csv	Final risk score + ranking（最終排序）
+📚 資料來源（Dataset）
 
-**## 資料來源（Dataset）**
-本專案使用：
+本專案使用資料如下：
 
 Elliptic++ Transactions Dataset — SIGKDD 2022
-
 原始資料來源：
-https://github.com/git-disl/EllipticPlusPlus
+🔗 https://github.com/git-disl/EllipticPlusPlus
