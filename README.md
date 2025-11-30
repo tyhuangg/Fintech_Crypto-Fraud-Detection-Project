@@ -96,14 +96,24 @@ python3 unsupervised.py
 ```bash
 python3 finalRiskScore.py
 ```
+---
+## 🏁 最終產出（Final Outputs）
+| 📄 檔案名稱                      | 📌 內容說明                                      |
+| ---------------------------- | -------------------------------------------- |
+| **`lr_predictions.csv`**     | Logistic Regression 產出的 `fraud_score`（監督式模型） |
+| **`if_anomaly_scores.csv`**  | Isolation Forest 產出的 `anomaly_score`（非監督式模型） |
+| **`risk_fusion_scores.csv`** | 最終 **fraud_risk_score + 風險排序**（排名越小越可疑）      |
+💡 所有 CSV 都可直接讀取分析，也可用來製作視覺化 / 報表 / Tableau Dashboard。
 
-### 🏁 最終產出（Final Outputs）
-檔案	內容
-lr_predictions.csv	Logistic Regression fraud scores
-if_anomaly_scores.csv	Isolation Forest anomaly scores
-risk_fusion_scores.csv	Final risk score + ranking（最終排序）
+## 📚 資料來源（Dataset）
+本專案使用的資料為：Elliptic++ Transactions Dataset — SIGKDD 2022
 
-### 📚 資料來源（Dataset）
+提供比特幣交易：
+✔ 特徵（features）
+✔ 標籤（licit / illicit / unknown）
+✔ 網路結構（edgelist）
 
-本專案使用資料如下：Elliptic++ Transactions Dataset — SIGKDD 2022
-原始資料來源：🔗 https://github.com/git-disl/EllipticPlusPlus
+🔗 原始資料來源（GitHub）
+https://github.com/git-disl/EllipticPlusPlus
+
+💡 本專案未附上資料原檔，請依原始授權規範自行下載。
