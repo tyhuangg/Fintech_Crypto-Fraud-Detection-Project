@@ -23,7 +23,7 @@
 ---
 
 ## 📂 專案結構（Repository Structure）
-
+```
 finalProj/
 ├─ cleaned_merged_dataset.csv # 清理後的完整特徵 + 標籤
 ├─ dataMerge.py # Merge tx_features + tx_classes 的程式
@@ -39,7 +39,7 @@ finalProj/
 ├─ txs_classes.csv # 原始標籤（licit / illicit / unknown）
 ├─ txs_features.csv # 原始特徵（地區特徵 + 彙總特徵 + BTC 特徵）
 └─ txs_edgelist.csv # 交易網路邊資料（未使用模型）
-
+```
 
 ---
 
@@ -78,26 +78,26 @@ finalProj/
 ```bash
 python3 dataMerge.py
 
-### 🔹 2. 監督式模型（Logistic Regression）
+**### 🔹 2. 監督式模型（Logistic Regression）**
 ```bash
 python3 supervised.py
 
-### 🔹 3. 非監督式模型（Isolation Forest）
+**### 🔹 3. 非監督式模型（Isolation Forest）**
 ```bash
 python3 unsupervised.py
 
-### 🔹 4. 風險融合模型（最終分數）
+**### 🔹 4. 風險融合模型（最終分數）**
 ```bash
 python3 finalRiskScore.py
 
-## 最終產出（Final Outputs）
+**## 最終產出（Final Outputs）**
 | 檔案                         | 內容                               |
 | -------------------------- | -------------------------------- |
 | **lr_predictions.csv**     | Logistic Regression fraud scores |
 | **if_anomaly_scores.csv**  | Isolation Forest anomaly scores  |
 | **risk_fusion_scores.csv** | Final risk score + ranking       |
 
-## 資料來源（Dataset）
+**## 資料來源（Dataset）**
 本專案使用：
 
 Elliptic++ Transactions Dataset — SIGKDD 2022
