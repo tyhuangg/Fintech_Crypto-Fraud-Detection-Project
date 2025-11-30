@@ -1,0 +1,12 @@
+# Ignore dataset files (too large)
+*.csv
+!lr_predictions.csv
+!if_anomaly_scores.csv
+!risk_fusion_scores.csv
+
+# Ignore python cache
+__pycache__/
+*.pyc
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
